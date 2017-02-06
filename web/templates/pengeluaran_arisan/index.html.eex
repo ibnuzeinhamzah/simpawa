@@ -1,0 +1,32 @@
+<h2>Listing pengeluaranarisan</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Tanggal</th>
+      <th>Jumlah</th>
+      <th>Penerima</th>
+      <th>Keterangan</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for pengeluaran_arisan <- @pengeluaranarisan do %>
+    <tr>
+      <td><%= pengeluaran_arisan.tanggal %></td>
+      <td><%= pengeluaran_arisan.jumlah %></td>
+      <td><%= pengeluaran_arisan.penerima %></td>
+      <td><%= pengeluaran_arisan.keterangan %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: pengeluaran_arisan_path(@conn, :show, pengeluaran_arisan), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: pengeluaran_arisan_path(@conn, :edit, pengeluaran_arisan), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: pengeluaran_arisan_path(@conn, :delete, pengeluaran_arisan), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New pengeluaran arisan", to: pengeluaran_arisan_path(@conn, :new) %>

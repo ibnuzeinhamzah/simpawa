@@ -1,0 +1,28 @@
+<h2>Show pengeluaran arisan</h2>
+
+<ul>
+
+  <li>
+    <strong>Tanggal:</strong>
+    <%= @pengeluaran_arisan.tanggal %>
+  </li>
+
+  <li>
+    <strong>Jumlah:</strong>
+    <%= @pengeluaran_arisan.jumlah %>
+  </li>
+
+  <li>
+    <strong>Penerima:</strong>
+    <%= @pengeluaran_arisan.penerima %>
+  </li>
+
+  <li>
+    <strong>Keterangan:</strong>
+    <%= @pengeluaran_arisan.keterangan %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: pengeluaran_arisan_path(@conn, :edit, @pengeluaran_arisan) %>
+<%= link "Back", to: pengeluaran_arisan_path(@conn, :index) %>
