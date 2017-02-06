@@ -1,0 +1,6 @@
+<h2>Edit dana sosial</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: dana_sosial_path(@conn, :update, @dana_sosial) %>
+
+<%= link "Back", to: dana_sosial_path(@conn, :index) %>

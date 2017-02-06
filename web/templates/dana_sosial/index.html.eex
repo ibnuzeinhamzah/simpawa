@@ -1,0 +1,30 @@
+<h2>Listing danasosial</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id anggota</th>
+      <th>Tanggal</th>
+      <th>Jumlah</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for dana_sosial <- @danasosial do %>
+    <tr>
+      <td><%= dana_sosial.id_anggota %></td>
+      <td><%= dana_sosial.tanggal %></td>
+      <td><%= dana_sosial.jumlah %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: dana_sosial_path(@conn, :show, dana_sosial), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: dana_sosial_path(@conn, :edit, dana_sosial), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: dana_sosial_path(@conn, :delete, dana_sosial), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New dana sosial", to: dana_sosial_path(@conn, :new) %>
