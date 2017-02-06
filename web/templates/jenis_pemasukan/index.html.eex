@@ -1,0 +1,26 @@
+<h2>Listing jenispemasukan</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Pemasukan</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for jenis_pemasukan <- @jenispemasukan do %>
+    <tr>
+      <td><%= jenis_pemasukan.pemasukan %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: jenis_pemasukan_path(@conn, :show, jenis_pemasukan), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: jenis_pemasukan_path(@conn, :edit, jenis_pemasukan), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: jenis_pemasukan_path(@conn, :delete, jenis_pemasukan), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New jenis pemasukan", to: jenis_pemasukan_path(@conn, :new) %>
