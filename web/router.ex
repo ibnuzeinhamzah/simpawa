@@ -19,6 +19,8 @@ defmodule Simpawa.Router do
     get "/", PageController, :index
   end
 
+  resources "/anggota", AnggotaController
+  
   # Other scopes may use custom stacks.
   # scope "/api", Simpawa do
   #   pipe_through :api

@@ -1,0 +1,13 @@
+<h2>Show anggota</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @anggota.name %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: anggota_path(@conn, :edit, @anggota) %>
+<%= link "Back", to: anggota_path(@conn, :index) %>
