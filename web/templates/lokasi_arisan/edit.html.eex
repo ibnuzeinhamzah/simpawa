@@ -1,0 +1,6 @@
+<h2>Edit lokasi arisan</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: lokasi_arisan_path(@conn, :update, @lokasi_arisan) %>
+
+<%= link "Back", to: lokasi_arisan_path(@conn, :index) %>

@@ -24,6 +24,7 @@ defmodule Simpawa.Router do
   resources "/simpananwajib", SimpananWajibController
   resources "/simpanansukarela", SimpananSukarelaController
   resources "/danasosial", DanaSosialController
+  resources "/lokasiarisan", LokasiArisanController
   
   # Other scopes may use custom stacks.
   # scope "/api", Simpawa do
