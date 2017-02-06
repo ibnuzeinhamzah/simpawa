@@ -1,0 +1,6 @@
+<h2>New dana arisan</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: dana_arisan_path(@conn, :create) %>
+
+<%= link "Back", to: dana_arisan_path(@conn, :index) %>
