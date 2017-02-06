@@ -1,0 +1,6 @@
+<h2>Edit pengeluaran sosial</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: pengeluaran_sosial_path(@conn, :update, @pengeluaran_sosial) %>
+
+<%= link "Back", to: pengeluaran_sosial_path(@conn, :index) %>

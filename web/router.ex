@@ -26,10 +26,11 @@ defmodule Simpawa.Router do
   resources "/danasosial", DanaSosialController
   resources "/lokasiarisan", LokasiArisanController
   resources "/danaarisan", DanaArisanController
-  resources "/jenispengeluaran", JenisPengeluaranController
-  resources "/pengeluaran", PengeluaranController
+  resources "/jenispengeluaran", JenisPengeluaranController # jenis pengeluaran koperasi
+  resources "/pengeluaran", PengeluaranController           # pengeluaran koperasi
   resources "/pengeluaranarisan", PengeluaranArisanController
-  
+  resources "/pengeluaransosial", PengeluaranSosialController   # pengeluaran dana sosial
+
   # Other scopes may use custom stacks.
   # scope "/api", Simpawa do
   #   pipe_through :api
