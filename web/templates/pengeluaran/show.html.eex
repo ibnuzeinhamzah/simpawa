@@ -1,0 +1,33 @@
+<h2>Show pengeluaran</h2>
+
+<ul>
+
+  <li>
+    <strong>Id pengeluaran:</strong>
+    <%= @pengeluaran.id_pengeluaran %>
+  </li>
+
+  <li>
+    <strong>Tanggal:</strong>
+    <%= @pengeluaran.tanggal %>
+  </li>
+
+  <li>
+    <strong>Penerima:</strong>
+    <%= @pengeluaran.penerima %>
+  </li>
+
+  <li>
+    <strong>Jumlah:</strong>
+    <%= @pengeluaran.jumlah %>
+  </li>
+
+  <li>
+    <strong>Keterangan:</strong>
+    <%= @pengeluaran.keterangan %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: pengeluaran_path(@conn, :edit, @pengeluaran) %>
+<%= link "Back", to: pengeluaran_path(@conn, :index) %>

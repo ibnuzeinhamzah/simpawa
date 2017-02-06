@@ -1,0 +1,34 @@
+<h2>Listing pengeluaran</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id pengeluaran</th>
+      <th>Tanggal</th>
+      <th>Penerima</th>
+      <th>Jumlah</th>
+      <th>Keterangan</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for pengeluaran <- @pengeluaran do %>
+    <tr>
+      <td><%= pengeluaran.id_pengeluaran %></td>
+      <td><%= pengeluaran.tanggal %></td>
+      <td><%= pengeluaran.penerima %></td>
+      <td><%= pengeluaran.jumlah %></td>
+      <td><%= pengeluaran.keterangan %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: pengeluaran_path(@conn, :show, pengeluaran), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: pengeluaran_path(@conn, :edit, pengeluaran), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: pengeluaran_path(@conn, :delete, pengeluaran), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New pengeluaran", to: pengeluaran_path(@conn, :new) %>

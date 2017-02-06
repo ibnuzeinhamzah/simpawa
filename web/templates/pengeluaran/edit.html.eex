@@ -1,0 +1,6 @@
+<h2>Edit pengeluaran</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: pengeluaran_path(@conn, :update, @pengeluaran) %>
+
+<%= link "Back", to: pengeluaran_path(@conn, :index) %>
