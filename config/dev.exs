@@ -45,4 +45,5 @@ config :simpawa, Simpawa.Repo,
 config :guardian, Guardian,
   allowed_algos: ["HS512"], # optional
   ttl: { 1, :days },
-  secret_key: <guardian secret key>
+  secret_key: "q6+fgqaJsXOm4NAeAX6ZgyNARCG8jNKkRIIsfHUamuyzAxjRKNMspUJAwQKj8fDU",
+  serializer: Simpawa.GuardianSerializer
