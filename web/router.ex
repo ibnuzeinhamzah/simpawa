@@ -31,6 +31,7 @@ defmodule Simpawa.Router do
   resources "/pengeluaranarisan", PengeluaranArisanController       # pengeluaran arisan
   resources "/pengeluaransosial", PengeluaranSosialController       # pengeluaran dana sosial
   resources "/jenispemasukan", JenisPemasukanController             # jenis pemasukan dana koperasi (piutang, bunga, denda)
+  resources "/pemasukan", PemasukanController                       # pemasukan dana koperasi
 
   # Other scopes may use custom stacks.
   # scope "/api", Simpawa do

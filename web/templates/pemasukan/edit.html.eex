@@ -1,0 +1,6 @@
+<h2>Edit pemasukan</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: pemasukan_path(@conn, :update, @pemasukan) %>
+
+<%= link "Back", to: pemasukan_path(@conn, :index) %>

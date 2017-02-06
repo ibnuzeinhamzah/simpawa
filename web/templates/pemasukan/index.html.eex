@@ -1,0 +1,34 @@
+<h2>Listing pemasukan</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Tanggal</th>
+      <th>Jumlah</th>
+      <th>Id anggota</th>
+      <th>Id pemasukan</th>
+      <th>Keterangan</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for pemasukan <- @pemasukan do %>
+    <tr>
+      <td><%= pemasukan.tanggal %></td>
+      <td><%= pemasukan.jumlah %></td>
+      <td><%= pemasukan.id_anggota %></td>
+      <td><%= pemasukan.id_pemasukan %></td>
+      <td><%= pemasukan.keterangan %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: pemasukan_path(@conn, :show, pemasukan), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: pemasukan_path(@conn, :edit, pemasukan), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: pemasukan_path(@conn, :delete, pemasukan), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New pemasukan", to: pemasukan_path(@conn, :new) %>
