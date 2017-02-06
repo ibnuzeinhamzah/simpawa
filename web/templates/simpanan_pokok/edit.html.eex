@@ -1,0 +1,6 @@
+<h2>Edit simpanan pokok</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: simpanan_pokok_path(@conn, :update, @simpanan_pokok) %>
+
+<%= link "Back", to: simpanan_pokok_path(@conn, :index) %>

@@ -1,0 +1,30 @@
+<h2>Listing simpananpokok</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id anggota</th>
+      <th>Tanggal</th>
+      <th>Jumlah</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for simpanan_pokok <- @simpananpokok do %>
+    <tr>
+      <td><%= simpanan_pokok.id_anggota %></td>
+      <td><%= simpanan_pokok.tanggal %></td>
+      <td><%= simpanan_pokok.jumlah %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: simpanan_pokok_path(@conn, :show, simpanan_pokok), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: simpanan_pokok_path(@conn, :edit, simpanan_pokok), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: simpanan_pokok_path(@conn, :delete, simpanan_pokok), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New simpanan pokok", to: simpanan_pokok_path(@conn, :new) %>

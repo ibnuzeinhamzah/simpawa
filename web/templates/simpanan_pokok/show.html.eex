@@ -1,0 +1,23 @@
+<h2>Show simpanan pokok</h2>
+
+<ul>
+
+  <li>
+    <strong>Id anggota:</strong>
+    <%= @simpanan_pokok.id_anggota %>
+  </li>
+
+  <li>
+    <strong>Tanggal:</strong>
+    <%= @simpanan_pokok.tanggal %>
+  </li>
+
+  <li>
+    <strong>Jumlah:</strong>
+    <%= @simpanan_pokok.jumlah %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: simpanan_pokok_path(@conn, :edit, @simpanan_pokok) %>
+<%= link "Back", to: simpanan_pokok_path(@conn, :index) %>

@@ -1,0 +1,6 @@
+<h2>New simpanan pokok</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: simpanan_pokok_path(@conn, :create) %>
+
+<%= link "Back", to: simpanan_pokok_path(@conn, :index) %>
