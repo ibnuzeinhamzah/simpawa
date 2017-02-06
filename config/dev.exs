@@ -41,3 +41,8 @@ config :simpawa, Simpawa.Repo,
   database: "simpawa",
   hostname: "localhost",
   pool_size: 10
+
+config :guardian, Guardian,
+  allowed_algos: ["HS512"], # optional
+  ttl: { 1, :days },
+  secret_key: <guardian secret key>
