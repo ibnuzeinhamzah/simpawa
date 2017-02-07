@@ -1,6 +1,0 @@
-<h2>New simpanan sukarela</h2>
-
-<%= render "form.html", changeset: @changeset,
-                        action: simpanan_sukarela_path(@conn, :create) %>
-
-<%= link "Back", to: simpanan_sukarela_path(@conn, :index) %>

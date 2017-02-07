@@ -1,6 +1,0 @@
-<h2>Edit jenis pengeluaran</h2>
-
-<%= render "form.html", changeset: @changeset,
-                        action: jenis_pengeluaran_path(@conn, :update, @jenis_pengeluaran) %>
-
-<%= link "Back", to: jenis_pengeluaran_path(@conn, :index) %>

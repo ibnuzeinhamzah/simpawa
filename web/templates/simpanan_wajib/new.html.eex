@@ -1,6 +1,0 @@
-<h2>New simpanan wajib</h2>
-
-<%= render "form.html", changeset: @changeset,
-                        action: simpanan_wajib_path(@conn, :create) %>
-
-<%= link "Back", to: simpanan_wajib_path(@conn, :index) %>

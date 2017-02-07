@@ -1,6 +1,0 @@
-<h2>New dana sosial</h2>
-
-<%= render "form.html", changeset: @changeset,
-                        action: dana_sosial_path(@conn, :create) %>
-
-<%= link "Back", to: dana_sosial_path(@conn, :index) %>

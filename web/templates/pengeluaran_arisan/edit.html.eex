@@ -1,6 +1,0 @@
-<h2>Edit pengeluaran arisan</h2>
-
-<%= render "form.html", changeset: @changeset,
-                        action: pengeluaran_arisan_path(@conn, :update, @pengeluaran_arisan) %>
-
-<%= link "Back", to: pengeluaran_arisan_path(@conn, :index) %>

@@ -1,6 +1,0 @@
-<h2>New pemasukan</h2>
-
-<%= render "form.html", changeset: @changeset,
-                        action: pemasukan_path(@conn, :create) %>
-
-<%= link "Back", to: pemasukan_path(@conn, :index) %>
