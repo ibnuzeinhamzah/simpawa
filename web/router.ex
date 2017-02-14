@@ -17,18 +17,8 @@ defmodule Simpawa.Router do
     pipe_through :browser # Use the default browser stack
 
     resources "/anggota", AnggotaController
-    // resources "/simpananpokok", SimpananPokokController               # pemasukan simpanan pokok
-    // resources "/simpananwajib", SimpananWajibController               # pemasukan simpanan wajin
-    // resources "/simpanansukarela", SimpananSukarelaController         # pemasukan simpanan sukarela
-    // resources "/danasosial", DanaSosialController                     # pemasukan dana sosial
-    // resources "/lokasiarisan", LokasiArisanController
-    // resources "/danaarisan", DanaArisanController                     # pemasukan dana arisan
-    // resources "/jenispengeluaran", JenisPengeluaranController         # jenis pengeluaran koperasi (pinjaman, anggota berhenti, pengambilan simpanan sukarela, pembelian atk, SHU, dll)
-    // resources "/pengeluaran", PengeluaranController                   # pengeluaran koperasi
-    // resources "/pengeluaranarisan", PengeluaranArisanController       # pengeluaran arisan
-    // resources "/pengeluaransosial", PengeluaranSosialController       # pengeluaran dana sosial
-    // resources "/jenispemasukan", JenisPemasukanController             # jenis pemasukan dana koperasi (piutang, bunga, denda)
-    // resources "/pemasukan", PemasukanController                       # pemasukan dana koperasi
+    resources "/simpananpokok", SimpananPokokController               # pemasukan simpanan pokok
+    
     get "/", PageController, :index
   end
 

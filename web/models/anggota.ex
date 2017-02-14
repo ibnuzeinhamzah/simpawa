@@ -2,6 +2,7 @@ defmodule Simpawa.Anggota do
   use Simpawa.Web, :model
 
   schema "anggota" do
+    has_one :simpananpokok, Simpawa.SimpananPokok
     field :name, :string
 
     timestamps()
